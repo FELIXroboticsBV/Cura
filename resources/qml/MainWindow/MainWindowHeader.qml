@@ -134,7 +134,7 @@ Item
         text: catalog.i18nc("@action:button", "Marketplace")
         height: Math.round(0.5 * UM.Theme.getSize("main_window_header").height)
         onClicked: Cura.Actions.browsePackages.trigger()
-        visible: false
+        visible: false // do not show the marketplace in this version of the application
         hoverEnabled: true
 
         background: Rectangle
