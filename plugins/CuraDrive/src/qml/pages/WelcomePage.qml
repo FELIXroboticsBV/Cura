@@ -41,6 +41,7 @@ Column
     Cura.PrimaryButton
     {
         id: loginButton
+        visible: false
         width: UM.Theme.getSize("account_button").width
         height: UM.Theme.getSize("account_button").height
         anchors.horizontalCenter: parent.horizontalCenter

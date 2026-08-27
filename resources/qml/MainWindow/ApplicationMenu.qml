@@ -118,7 +118,7 @@ Item
         }
     }
 
-    // show the Toolbox
+    /*// show the Toolbox
     Connections
     {
         target: Cura.Actions.browsePackages
@@ -137,5 +137,5 @@ Item
             extensionMenu.extensionModel.callExtensionMethod("Marketplace", "show")
             extensionMenu.extensionModel.callExtensionMethod("Marketplace", "setVisibleTabToMaterials")
         }
-    }
+    }*/
 }
