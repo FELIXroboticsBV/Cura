@@ -52,7 +52,7 @@ fragment41core =
     }
 
 [defaults]
-u_color = [0.02, 0.02, 0.02, 1.0]
+u_color = [0.2, 0.02, 0.2, 1.0]
 
 [bindings]
 u_modelMatrix = model_matrix
