@@ -18,14 +18,13 @@ Item
     Button
     {
         id: signInButton
-
         anchors.verticalCenter: parent.verticalCenter
 
         text: catalog.i18nc("@action:button", "Sign in")
 
         height: Math.round(0.5 * UM.Theme.getSize("main_window_header").height)
         onClicked: popup.opened ? popup.close() : popup.open()
-        visible: !loggedIn
+        visible: false
 
         hoverEnabled: true
 

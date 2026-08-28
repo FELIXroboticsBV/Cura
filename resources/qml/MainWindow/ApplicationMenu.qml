@@ -23,7 +23,6 @@ Item
         id: applicationMenu
         width: parent.width
         height: UM.Theme.getSize("context_menu").height
-
         background: Rectangle {
             color: UM.Theme.getColor("background_1")
         }
@@ -51,8 +50,8 @@ Item
         }
 
         FileMenu {}
-        EditMenu {}
-        ViewMenu {}
+        //EditMenu {}
+        //ViewMenu {}
         SettingsMenu
         {
             //On MacOS, don't translate the "Settings" word.
@@ -64,8 +63,8 @@ Item
             //- https://doc.qt.io/qt-5/qmenubar.html#qmenubar-as-a-global-menu-bar
             title: (Qt.platform.os == "osx") ? "&Settings" : catalog.i18nc("@title:menu menubar:toplevel", "&Settings")
         }
-        ExtensionMenu { id: extensionMenu }
-        PreferencesMenu {}
+        //ExtensionMenu { id: extensionMenu }
+        //PreferencesMenu {}
         HelpMenu {}
     }
 
@@ -118,7 +117,8 @@ Item
         }
     }
 
-    // show the Toolbox
+    /*// show the Toolbox
+
     Connections
     {
         target: Cura.Actions.browsePackages
@@ -137,5 +137,5 @@ Item
             extensionMenu.extensionModel.callExtensionMethod("Marketplace", "show")
             extensionMenu.extensionModel.callExtensionMethod("Marketplace", "setVisibleTabToMaterials")
         }
-    }
+    }*/
 }

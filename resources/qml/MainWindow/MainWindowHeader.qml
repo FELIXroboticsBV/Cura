@@ -13,7 +13,6 @@ import "../ApplicationSwitcher"
 Item
 {
     id: base
-
     implicitHeight: UM.Theme.getSize("main_window_header").height
     implicitWidth: UM.Theme.getSize("main_window_header").width
 
@@ -24,9 +23,9 @@ Item
         anchors.leftMargin: UM.Theme.getSize("default_margin").width
         anchors.verticalCenter: parent.verticalCenter
 
-        source: UM.Theme.getImage("logo")
-        width: UM.Theme.getSize("logo").width
-        height: UM.Theme.getSize("logo").height
+        source: UM.Theme.getImage("logo_felix")
+        width: UM.Theme.getSize("logo_felix").width
+        height: UM.Theme.getSize("logo_felix").height
         fillMode: Image.PreserveAspectFit
         sourceSize.width: width
         sourceSize.height: height
@@ -100,7 +99,7 @@ Item
                     id: buttonLabel
                     text: stageSelectorButton.text
                     anchors.centerIn: stageSelectorButton
-                    font: UM.Theme.getFont("medium")
+                    font: UM.Theme.getFont("small")
                     color:
                     {
                         if (stageSelectorButton.checked)
@@ -135,7 +134,7 @@ Item
         text: catalog.i18nc("@action:button", "Marketplace")
         height: Math.round(0.5 * UM.Theme.getSize("main_window_header").height)
         onClicked: Cura.Actions.browsePackages.trigger()
-
+        visible: false // do not show the marketplace in this version of the application
         hoverEnabled: true
 
         background: Rectangle

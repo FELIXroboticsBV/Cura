@@ -126,6 +126,7 @@ Control
                 {
                     id: signInButton
                     Layout.alignment: Qt.AlignRight
+                    visible: false
                     text: catalog.i18nc("@button", "Sign in to Digital Factory")
                     onClicked: function()
                     {
