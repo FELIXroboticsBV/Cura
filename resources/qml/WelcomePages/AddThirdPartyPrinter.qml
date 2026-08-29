@@ -104,6 +104,7 @@ Item
     {
         id: backButton
         anchors.left: parent.left
+        visible: false
         anchors.bottom: parent.bottom
         text: catalog.i18nc("@button", "Add UltiMaker printer via Digital Factory")
         onClicked: goToUltimakerPrinter()

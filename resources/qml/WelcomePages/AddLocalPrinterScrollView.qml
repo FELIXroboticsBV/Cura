@@ -10,7 +10,7 @@ import Cura 1.1 as Cura
 
 //
 // This is the scroll view widget for adding a (local) printer. This scroll view shows a list view with printers
-// categorized into 3 categories: "Ultimaker", "Custom", and "Other".
+// categorized into 3 categories: "Felix", "Custom", and "Other".
 //
 Item
 {
@@ -20,9 +20,9 @@ Item
     property var currentItem: machineList.currentIndex >= 0 ? machineList.model.getItem(machineList.currentIndex) : null
     // The currently active (expanded) section/category, where section/category is the grouping of local machine items.
     property var currentSections: new Set()
-    // By default (when this list shows up) we always expand the "Ultimaker" section.
+    // By default (when this list shows up) we always expand the "Felix" section.
     property var preferredCategories: {
-        "Ultimaker B.V.": -2,
+        "Felix": -2,
         "Custom": -1
     }
 
@@ -69,7 +69,7 @@ Item
 
     Component.onCompleted:
     {
-        const initialSection = "Ultimaker B.V.";
+        const initialSection = "Felix";
         base.currentSections = new Set([initialSection]);
         updateCurrentItemUponSectionChange(initialSection);
     }
@@ -87,12 +87,13 @@ Item
             Item
             {
                 width: root.width
-                height: filter.height
+                height: 0 //filter.height
                 Cura.TextField
                 {
                     id: filter
                     width: parent.width
                     implicitHeight: parent.height
+                    visible: false
                     background: Rectangle {
                         id: background
                         color: UM.Theme.getColor("main_background")
@@ -143,7 +144,7 @@ Item
                         }
                         else
                         {
-                            const initialSection = "Ultimaker B.V.";
+                            const initialSection = "Felix";
                             base.currentSections = new Set([initialSection]);
                             updateCurrentItemUponSectionChange(initialSection);
                             updateCurrentItem(0)
@@ -177,7 +178,12 @@ Item
             }
 
             //Selecting a local printer to add from this list.
-            ListView
+            /*ListView
+
+             //===================================================
+             Cura had a collapsable tree view that combined manufacturer with the printers
+             that is no longer necessary and we can display all printers this application supports since there are
+             like 5 of them
             {
                 id: machineList
                 width: root.width
@@ -268,7 +274,43 @@ Item
                     visible: base.currentSections.has(section)
                     onClicked: base.updateCurrentItem(index)
                 }
-            }
+            }*/
+                ListView
+                {
+                    id: machineList
+                    width: root.width
+                    height: root.height - filter.height
+                    clip: true
+                    ScrollBar.vertical: UM.ScrollBar {}
+
+                    model: UM.DefinitionContainersModel
+                    {
+                        id: machineDefinitionsModel
+                        filter: { "visible": true }
+                        sectionProperty: "manufacturer"
+                    }
+
+                    delegate: Cura.RadioButton
+                    {
+                        id: radioButton
+
+                        anchors
+                        {
+                            left: parent !== null ? parent.left : undefined
+                            leftMargin: UM.Theme.getSize("default_margin").width
+
+                            right: parent !== null ? parent.right : undefined
+                            rightMargin: UM.Theme.getSize("default_margin").width
+                        }
+
+                        height: UM.Theme.getSize("standard_list_lineheight").height
+
+                        checked: machineList.currentIndex == index
+                        text: name
+
+                        onClicked: base.updateCurrentItem(index)
+                    }
+                }
         }
 
         // Vertical line
@@ -292,7 +334,7 @@ Item
             UM.Label
             {
                 id: machineName
-                width: parent.width - (2 * UM.Theme.getSize("default_margin").width)
+                width: parent.width - (2 * UM.Theme.AgetSize("default_margin").width)
                 color: UM.Theme.getColor("primary_button")
                 font: UM.Theme.getFont("huge")
                 elide: Text.ElideRight

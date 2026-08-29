@@ -63,7 +63,7 @@ Item
             //- https://doc.qt.io/qt-5/qmenubar.html#qmenubar-as-a-global-menu-bar
             title: (Qt.platform.os == "osx") ? "&Settings" : catalog.i18nc("@title:menu menubar:toplevel", "&Settings")
         }
-        //ExtensionMenu { id: extensionMenu }
+        ExtensionMenu { id: extensionMenu }
         //PreferencesMenu {}
         HelpMenu {}
     }
