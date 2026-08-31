@@ -42,6 +42,13 @@ Popup
                     description: "Visit shop of the FELIX Printers ",
                     link: "https://shop.felixprinters.com/",
                     permissionsRequired: []
+                },
+                {
+                    displayName: "Report bug",
+                    thumbnail: UM.Theme.getIcon("Bug", "high"),
+                    description: "If you find error feel free to report it. !Requires GithubAccount",
+                    link: "https://github.com/FELIXroboticsBV/FELIX-FILO/issues/new?template=bugreport.yaml",
+                    permissionsRequired: []
                 }
             ]
 
