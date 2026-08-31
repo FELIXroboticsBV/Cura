@@ -22,7 +22,8 @@
             102
         ],
         "preferred_variant_name": "0.35 mm",
-        "variants_name": "Nozzle Diam"
+        "variants_name": "Nozzle Diam",
+        "isFoodPrinter" : false
     },
     "overrides":
     {

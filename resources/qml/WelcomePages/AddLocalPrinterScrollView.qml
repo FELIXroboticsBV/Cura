@@ -58,6 +58,8 @@ Item
             machineName.text = currentItem.name
             manufacturer.text = currentItem.metadata["manufacturer"]
             author.text = currentItem.metadata["author"]
+            isFoodPrinter.text = currentItem.metadata["isFoodPrinter"]
+
         }
         else
         {
@@ -367,6 +369,17 @@ Item
                 UM.Label
                 {
                     id: author
+                    width: parent.width - profileAuthorLabel.width
+                    wrapMode: Text.WordWrap
+                }
+                UM.Label
+                {
+                    id: profileAuthorLabel
+                    text: "Is food printer"
+                }
+                UM.Label
+                {
+                    id: isFoodPrinter
                     width: parent.width - profileAuthorLabel.width
                     wrapMode: Text.WordWrap
                 }
