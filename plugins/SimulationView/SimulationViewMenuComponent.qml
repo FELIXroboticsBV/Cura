@@ -147,6 +147,7 @@ Cura.ExpandableComponent
                 text: catalog.i18nc("@label:listbox", "Flow"),
                 type_id: 5
             })
+
         }
 
         Cura.ComboBox
