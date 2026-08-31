@@ -81,7 +81,7 @@ Loader {
                     width: UM.Theme.getSize("medium_button").width
                     color: UM.Theme.getColor("machine_selector_printer_icon")
                     visible: model.isAbstractMachine || !model.isOnline
-                    source: model.isAbstractMachine ? UM.Theme.getIcon("PrinterTriple", "medium") : UM.Theme.getIcon("Printer", "medium")
+                    source: model.isFoodPrinter ? UM.Theme.getIcon("FoodPrinter", "medium") : UM.Theme.getIcon("Printer", "medium")
 
                     anchors
                     {

@@ -29,6 +29,7 @@ class MachineListModel(ListModel):
     IsAbstractMachineRole = Qt.ItemDataRole.UserRole + 7
     ComponentTypeRole = Qt.ItemDataRole.UserRole + 8
     IsNetworkedMachineRole = Qt.ItemDataRole.UserRole + 9
+    IsFoodPrinterMachineRole = Qt.ItemDataRole.UserRole + 10
 
     def __init__(self, parent: Optional[QObject] = None, machines_filter: List[GlobalStack] = None, listenToChanges: bool = True, showCloudPrinters: bool = False) -> None:
         super().__init__(parent)
@@ -47,6 +48,7 @@ class MachineListModel(ListModel):
         self.addRoleName(self.IsAbstractMachineRole, "isAbstractMachine")
         self.addRoleName(self.ComponentTypeRole, "componentType")
         self.addRoleName(self.IsNetworkedMachineRole, "isNetworked")
+        self.addRoleName(self.IsFoodPrinterMachineRole, "isFoodPrinter")
 
         self._change_timer = QTimer()
         self._change_timer.setInterval(200)
@@ -147,6 +149,8 @@ class MachineListModel(ListModel):
     def addItem(self, container_stack: ContainerStack, is_online: bool, machine_count: int = 0) -> None:
         if parseBool(container_stack.getMetaDataEntry("hidden", False)):
             return
+        # get from metadata if the printer is food printer or not
+        is_food_printer =  parseBool(container_stack.getMetaDataEntry("isFoodPrinter", False))
 
         self.appendItem({
             "componentType": "MACHINE",
@@ -158,6 +162,7 @@ class MachineListModel(ListModel):
             "isNetworked": cast(GlobalStack, container_stack).hasNetworkedConnection() if isinstance(container_stack, GlobalStack) else False,
             "machineCount": machine_count,
             "catergory": "connected" if is_online else "other",
+            "isFoodPrinter": is_food_printer,
         })
 
     def getItems(self) -> Dict[str, Any]:

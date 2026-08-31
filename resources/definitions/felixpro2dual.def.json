@@ -23,7 +23,7 @@
         ],
         "preferred_variant_name": "0.35 mm",
         "variants_name": "Nozzle diameter",
-        "isFoodPrinter" : false
+        "isFoodPrinter" : true
     },
     "overrides":
     {

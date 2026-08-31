@@ -1,0 +1,19 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
+	<defs>
+		<image width="24" height="24" id="img1" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjb2xvcj0iIzAwMDAwMCI+PHBhdGggZD0iTTEyLjE0NzEgMjEuMjY0NkwxMiAyMS4yMzUxTDExLjg1MjkgMjEuMjY0NkM5LjQ3NjI3IDIxLjczOTkgNy4yMzI1NyAyMS40NzU2IDUuNTkzNTIgMjAuMTY0M0MzLjk2MzEyIDE4Ljg2IDIuNzUgMTYuMzc0IDIuNzUgMTJDMi43NSA3LjUyNjg0IDMuNzU3OTIgNS43MDk1NSA1LjA4NTQxIDUuMDQ1ODFDNS43Nzk3NyA0LjY5ODYzIDYuNjc3NzEgNC41OTc1OSA3LjgyMDI4IDQuNzI5NDNDOC45NjE0OSA0Ljg2MTExIDEwLjI3ODMgNS4yMTY2OSAxMS43NjI4IDUuNzExNTNMMTIuMDIzNSA1Ljc5ODQxTDEyLjI3ODUgNS42OTYzOEMxNC43NjAyIDQuNzAzNjcgMTYuOTkwOSA0LjMyMzQgMTguNTU3OCA1LjA1NDYzQzIwLjAyNzEgNS43NDAzIDIxLjI1IDcuNTkzMjYgMjEuMjUgMTJDMjEuMjUgMTYuMzc0IDIwLjAzNjkgMTguODYgMTguNDA2NSAyMC4xNjQzQzE2Ljc2NzQgMjEuNDc1NiAxNC41MjM3IDIxLjczOTkgMTIuMTQ3MSAyMS4yNjQ2WiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjEuNSI+PC9wYXRoPjxwYXRoIGQ9Ik0xMiA1LjVDMTIgMyAxMSAyIDkgMiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+PC9zdmc+"/>
+		<image  width="12" height="12" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAAAXNSR0IB2cksfwAAAPlQTFRFAAAACcoACcoBCckBCcoACcsBCcoBCcsBCcsBCcsBCcoBCcsB5x0u5hwucGMW6B4v6R4v5xor5Rou6R4v6R4v6B0u6B4v6R4v5h4v6B4v/gAW/gAV/wEX/wEX/Akd6R4v6B4v/gAW/gMZ+wAV/QAV/gAW/wEX/gAT+A0j/AIW/gAW/gAW/gAU/gAW/QAV/gQa+g8j/QAV5xwu/Qcc/AAV/AAV/gEW/wEX/gAW/Qof6R0v6B0v6B0v6B0u/A8k/gAW/QAU/gAW/gAW/A8k5x4v6B0v6B4v6B0u7Roo/Awh/Q8k/Q8j5xov6B4v6R4v6R4v8Bkr8BYq/gccFPBgIQAAAFN0Uk5TABKbXqVpFsTy2O+DAAHmKgAL9On6+unRAAn8/v706PwEweT+/v///f2z3/H12//y/vQK7/75+O/W7fs6Auz26/fu+f2tDkT++f7+/eAGZOz/+v3seCPgAAAAaElEQVR4nGNkYGBkZPzLwvibAchiYGBjBIGvEA4DD4jD8AHEEWCEghdAjuRPDkbG/0xA3gNGBkXGH5wQqeuMDFqMHwQZGd+KMDKeZ2QwgulhPMrIYANj7wEa4AplbwHb4wtmr4NaCgcAycURDWvNKNcAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		.s0 { fill: white }
+	</style>
+	<g id="Layer_1">
+		<g>
+			<path class="s0" d="m26 4h-22v22h4.83l2-2h8.34l2 2h4.83zm-2 2v18h-2l-2-2h-10l-2 2h-2v-18z"/>
+			<path fill-rule="evenodd" class="s0" d="m10 18h10v2h-10z"/>
+		</g>
+		<use id="apple" href="#img1" transform="matrix(.417,0,0,.417,10,8)"/>
+		<use id="Layer 1" href="#img2" x="9" y="7"/>
+	</g>
+	<g id="Comments">
+	</g>
+</svg>

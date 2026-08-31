@@ -374,7 +374,7 @@ Item
                 }
                 UM.Label
                 {
-                    id: profileAuthorLabel
+                    id: isFoodPrinterLabel
                     text: "Is food printer"
                 }
                 UM.Label
@@ -389,7 +389,6 @@ Item
                     id: printerNameLabel
                     text: catalog.i18nc("@label", "Printer name")
                 }
-
                 Cura.TextField
                 {
                     id: printerNameTextField
