@@ -26,14 +26,14 @@ Control
 
         UM.Label
         {
-            text: catalog.i18nc("@label", "In order to start using Cura you will need to configure a printer.")
+            text: catalog.i18nc("@label", "In order to start using FELIX FILO you will need to configure a FELIX printer.")
             font: UM.Theme.getFont("default")
             Layout.alignment: Qt.AlignTop
         }
 
         UM.Label
         {
-            text: catalog.i18nc("@label", "What printer would you like to setup?")
+            text: catalog.i18nc("@label", "Click on the button and select FELIX printer that you own !")
             font: UM.Theme.getFont("default_bold")
             Layout.alignment: Qt.AlignTop
         }
@@ -49,32 +49,13 @@ Control
 
             PrinterCard
             {
-                id: ultimakerPrinterCard
-                Layout.alignment: Qt.AlignBottom
-                onClicked: goToUltimakerPrinter
-                text: catalog.i18nc("@button", "UltiMaker printer")
-                imageSource: UM.Theme.getImage("ultimaker_printer")
-            }
-
-            PrinterCard
-            {
                 id: thrirdPartyPrinterCard
                 Layout.alignment: Qt.AlignBottom
                 onClicked: goToThirdPartyPrinter
-                text: catalog.i18nc("@button", "Non UltiMaker printer")
+                text: catalog.i18nc("@button", "Add FELIX printer")
                 imageSource: UM.Theme.getImage("third_party_printer")
             }
         }
 
-        Cura.TertiaryButton
-        {
-            id: learnMoreButton
-            Layout.alignment: Qt.AlignBottom
-            text: catalog.i18nc("@button", "Learn more about adding printers to Cura")
-            iconSource: UM.Theme.getIcon("LinkExternal")
-            isIconOnRightSide: true
-            textFont: UM.Theme.getFont("small")
-            onClicked: Qt.openUrlExternally("https://support.ultimaker.com/s/article/1667410775048")
-        }
     }
 }
