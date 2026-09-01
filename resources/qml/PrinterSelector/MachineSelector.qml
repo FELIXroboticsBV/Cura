@@ -16,7 +16,7 @@ Cura.ExpandablePopup
     property bool isConnectedCloudPrinter: machineManager.activeMachineHasCloudConnection
     property bool isCloudRegistered: machineManager.activeMachineHasCloudRegistration
     property bool isGroup: machineManager.activeMachineIsGroup
-    property bool isFoodPrinter: machineManager.activeMachineIsFoodPrinter
+    property bool isFoodPrinter: machineManager.isActiveMachineFoodPrinter
 
     property bool isActive: machineManager.activeMachineIsActive
     property string machineName: {
