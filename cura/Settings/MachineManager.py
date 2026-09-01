@@ -648,9 +648,8 @@ class MachineManager(QObject):
     def isActiveMachineFoodPrinter(self) -> bool:
         if self.activeMachine is None:
             return False
-        return parseBool(
-            self.activeMachine.getMetaDataEntry("isFoodPrinter", False)
-        )
+        return self.activeMachine.getMetaDataEntry("felix-printer-type", "plastic") == "food"
+
 
     @pyqtProperty(str, notify = activeIntentChanged)
     def activeIntentCategory(self) -> str:

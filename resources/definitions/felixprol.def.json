@@ -300,7 +300,8 @@
             "xyzprinting_tpu",
             "zyyx_pro_flex",
             "zyyx_pro_pla"
-        ]
+        ],
+      "felix-printer-type": "plastic"
     },
     "overrides":
     {
@@ -441,6 +442,7 @@
         { 
             "value": "xy_overrides_z",
             "default_value": "xy_overrides_z"
-        }
+        },
+
     }
 }

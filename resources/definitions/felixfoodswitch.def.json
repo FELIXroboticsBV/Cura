@@ -27,7 +27,8 @@
         "preferred_variant_name": "Steel syringe 2.0 mm nozzle",
 		"preferred_material": "felix_scale2_254",
 		"preferred_quality_type": "fine",
-		"exclude_materials": []
+		"exclude_materials": [],
+        "felix-printer-type": "food"
     },
     "overrides":
     {

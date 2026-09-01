@@ -150,7 +150,7 @@ class MachineListModel(ListModel):
         if parseBool(container_stack.getMetaDataEntry("hidden", False)):
             return
         # get from metadata if the printer is food printer or not
-        is_food_printer =  parseBool(container_stack.getMetaDataEntry("isFoodPrinter", False))
+        is_food_printer =  container_stack.getMetaDataEntry("felix-printer-type", "plastic") == "food"
 
         self.appendItem({
             "componentType": "MACHINE",
