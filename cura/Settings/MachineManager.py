@@ -644,6 +644,13 @@ class MachineManager(QObject):
             return False
         return active_quality_group.is_experimental
 
+    @pyqtProperty(bool, notify = globalContainerChanged)
+    def isActiveMachineFoodPrinter(self) -> bool:
+        if self.activeMachine is None:
+            return False
+        return self.activeMachine.getMetaDataEntry("felix-printer-type", "plastic") == "food"
+
+
     @pyqtProperty(str, notify = activeIntentChanged)
     def activeIntentCategory(self) -> str:
         global_container_stack = self._application.getGlobalContainerStack()

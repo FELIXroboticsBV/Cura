@@ -16,6 +16,8 @@ Cura.ExpandablePopup
     property bool isConnectedCloudPrinter: machineManager.activeMachineHasCloudConnection
     property bool isCloudRegistered: machineManager.activeMachineHasCloudRegistration
     property bool isGroup: machineManager.activeMachineIsGroup
+    property bool isFoodPrinter: machineManager.activeMachineIsFoodPrinter
+
     property bool isActive: machineManager.activeMachineIsActive
     property string machineName: {
         if (isNetworkPrinter && machineManager.activeMachineNetworkGroupName != "")
@@ -61,6 +63,7 @@ Cura.ExpandablePopup
     }
 
     function getConnectionStatusMessage() {
+
         if (connectionStatus === "printer_cloud_not_available")
         {
             if(Cura.API.connectionStatus.isInternetReachable)
@@ -111,19 +114,13 @@ Cura.ExpandablePopup
 
         source:
         {
-            if (isGroup)
+            if (isFoodPrinter)
             {
-                return UM.Theme.getIcon("PrinterTriple", "medium")
-            }
-            else if (isNetworkPrinter || isCloudRegistered)
-            {
-                return UM.Theme.getIcon("Printer", "medium")
+                UM.Theme.getIcon("FoodPrinter", "medium")
+            }else {
+                UM.Theme.getIcon("Printer", "medium")
             }
 
-            else
-            {
-                return ""
-            }
         }
         font: UM.Theme.getFont("medium")
         iconColor: UM.Theme.getColor("machine_selector_printer_icon")

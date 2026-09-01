@@ -58,6 +58,8 @@ Item
             machineName.text = currentItem.name
             manufacturer.text = currentItem.metadata["manufacturer"]
             author.text = currentItem.metadata["author"]
+            isFoodPrinter.text = currentItem.metadata["isFoodPrinter"]
+
         }
         else
         {
@@ -370,13 +372,23 @@ Item
                     width: parent.width - profileAuthorLabel.width
                     wrapMode: Text.WordWrap
                 }
+                UM.Label
+                {
+                    id: isFoodPrinterLabel
+                    text: "Is food printer"
+                }
+                UM.Label
+                {
+                    id: isFoodPrinter
+                    width: parent.width - profileAuthorLabel.width
+                    wrapMode: Text.WordWrap
+                }
 
                 UM.Label
                 {
                     id: printerNameLabel
                     text: catalog.i18nc("@label", "Printer name")
                 }
-
                 Cura.TextField
                 {
                     id: printerNameTextField
