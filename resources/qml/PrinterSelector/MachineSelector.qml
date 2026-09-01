@@ -116,6 +116,7 @@ Cura.ExpandablePopup
         {
             if (isFoodPrinter)
             {
+                //TODO: use normal icon path instead of get icon because that is SVG only
                 UM.Theme.getIcon("FoodPrinter", "medium")
             }else {
                 UM.Theme.getIcon("Printer", "medium")
