@@ -173,7 +173,7 @@ class CuraApplication(QtApplication):
                          tray_icon_name = "cura-icon-32.png" if not ApplicationMetadata.IsAlternateVersion else "cura-icon-32_wip.png",
                          **kwargs)
 
-        self.default_theme = "cura-dark"
+        self.default_theme = "cura-light"
 
         self.change_log_url = "https://ultimaker.com/ultimaker-cura-latest-features"
         self.beta_change_log_url = "https://ultimaker.com/ultimaker-cura-beta-features"
