@@ -11,6 +11,7 @@ MaterialMenu 1.0 MaterialMenu.qml
 NozzleMenu 1.0 NozzleMenu.qml
 ActionPanelWidget 1.0 ActionPanelWidget.qml
 IconWithText 1.0 IconWithText.qml
+IconWithTextPNG 1.0 IconWithTextPNG.qml
 OutputDevicesActionButton 1.0 OutputDevicesActionButton.qml
 ExpandableComponent 1.0 ExpandableComponent.qml
 PrinterTypeLabel 1.0 PrinterTypeLabel.qml

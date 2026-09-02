@@ -108,7 +108,7 @@ Cura.ExpandablePopup
         name: "cura"
     }
 
-    headerItem: Cura.IconWithText
+    headerItem: Cura.IconWithTextPNG
     {
         text: machineName
 
@@ -116,15 +116,15 @@ Cura.ExpandablePopup
         {
             if (isFoodPrinter)
             {
-                //TODO: use normal icon path instead of get icon because that is SVG only
-                UM.Theme.getIcon("FoodPrinter", "medium")
-            }else {
-                UM.Theme.getIcon("Printer", "medium")
+                return UM.Theme.getImage("felix-food")
+            }
+            else
+            {
+               return  UM.Theme.getImage("felix-plastic")
             }
 
         }
         font: UM.Theme.getFont("medium")
-        iconColor: UM.Theme.getColor("machine_selector_printer_icon")
         iconSize: source != "" ? UM.Theme.getSize("machine_selector_icon").width: 0
 
         UM.ColorImage

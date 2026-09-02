@@ -74,14 +74,15 @@ Loader {
                 width: machineListButton.width - machineListButton.leftPadding - machineListButton.rightPadding
                 height: UM.Theme.getSize("action_button").height
 
-                UM.ColorImage
+                Image
                 {
                     id: printerIcon
-                    height: UM.Theme.getSize("medium_button").height
-                    width: UM.Theme.getSize("medium_button").width
-                    color: UM.Theme.getColor("machine_selector_printer_icon")
+                    width: UM.Theme.getSize("machine_selector_icon").width - 10
+
+                    height: UM.Theme.getSize("machine_selector_icon").height
+
                     visible: model.isAbstractMachine || !model.isOnline
-                    source: model.isFoodPrinter ? UM.Theme.getIcon("FoodPrinter", "medium") : UM.Theme.getIcon("Printer", "medium")
+                    source: model.isFoodPrinter ? UM.Theme.getImage("felix-food") : UM.Theme.getImage("felix-plastic")
 
                     anchors
                     {
