@@ -110,7 +110,7 @@ class CrashHandler:
         layout = QVBoxLayout(dialog)
 
         label = QLabel()
-        label.setText(catalog.i18nc("@label crash message", """<p><b>Oops, UltiMaker Cura has encountered something that doesn't seem right.</p></b>
+        label.setText(catalog.i18nc("@label crash message", """<p><b>Oops, Felix filo has encountered something that doesn't seem right.</p></b>
                     <p>We encountered an unrecoverable error during start up. It was possibly caused by some incorrect configuration files. We suggest to backup and reset your configuration.</p>
                     <p>Backups can be found in the configuration folder.</p>
                     <p>Please send us this Crash Report to fix the problem.</p>
@@ -119,7 +119,7 @@ class CrashHandler:
         layout.addWidget(label)
 
         # "send report" check box and show details
-        self._send_report_checkbox = QCheckBox(catalog.i18nc("@action:button", "Send crash report to UltiMaker"), dialog)
+        self._send_report_checkbox = QCheckBox(catalog.i18nc("@action:button", "Send crash report to FELIXRobotics"), dialog)
         self._send_report_checkbox.setChecked(True)
 
         show_details_button = QPushButton(catalog.i18nc("@action:button", "Show detailed crash report"), dialog)
@@ -187,7 +187,7 @@ class CrashHandler:
 
     def _messageWidget(self):
         label = QLabel()
-        label.setText(catalog.i18nc("@label crash message", """<p><b>A fatal error has occurred in Cura. Please send us this Crash Report to fix the problem</p></b>
+        label.setText(catalog.i18nc("@label crash message", """<p><b>A fatal error has occurred in FELIX FILO. Please send us this Crash Report to fix the problem</p></b>
             <p>Please use the "Send report" button to post a bug report automatically to our servers</p>
         """))
 
@@ -204,7 +204,7 @@ class CrashHandler:
             self.cura_version = Application.getInstance().getVersion()
             self.cura_locale = Application.getInstance().getPreferences().getValue("general/language")
         except:
-            self.cura_version = catalog.i18nc("@label unknown version of Cura", "Unknown")
+            self.cura_version = catalog.i18nc("@label unknown version of FELIX FILO", "Unknown")
             self.cura_locale = "??_??"
 
         self.data["cura_version"] = self.cura_version
@@ -225,8 +225,8 @@ class CrashHandler:
         except:
             self.data["plugins"] = {"[FAILED]": "0.0.0"}
 
-        crash_info = "<b>" + catalog.i18nc("@label Cura version number", "Cura version") + ":</b> " + str(self.cura_version) + "<br/>"
-        crash_info += "<b>" + catalog.i18nc("@label", "Cura language") + ":</b> " + str(self.cura_locale) + "<br/>"
+        crash_info = "<b>" + catalog.i18nc("@label FELIX FILO version number", "Cura version") + ":</b> " + str(self.cura_version) + "<br/>"
+        crash_info += "<b>" + catalog.i18nc("@label", "FELIX FILO language") + ":</b> " + str(self.cura_locale) + "<br/>"
         crash_info += "<b>" + catalog.i18nc("@label", "OS language") + ":</b> " + str(self.data["locale_os"]) + "<br/>"
         crash_info += "<b>" + catalog.i18nc("@label Type of platform", "Platform") + ":</b> " + str(platform.platform()) + "<br/>"
         crash_info += "<b>" + catalog.i18nc("@label", "Qt version") + ":</b> " + str(QT_VERSION_STR) + "<br/>"

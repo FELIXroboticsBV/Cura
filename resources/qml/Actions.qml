@@ -546,7 +546,7 @@ Item
     Action
     {
         id: openCuraLogFileAction
-        text: catalog.i18nc("@action:inmenu menubar:help","Open Cura Log File")
+        text: catalog.i18nc("@action:inmenu menubar:help","Open FILO Log File")
     }
 
 
