@@ -832,7 +832,7 @@ UM.MainWindow
             var configurationPath = Qt.platform.os == "linux" 
                 ? UM.Resources.getPath(UM.Resources.Resources, "")
                 : UM.Resources.getPath(UM.Resources.Preferences, "");
-            var logFilePath = configurationPath + "cura.log";
+            var logFilePath = configurationPath + "filo.log";
             if (Qt.platform.os == "windows")
             {
                 logFilePath = "file:///" + logFilePath.replace(/\\/g, "/");

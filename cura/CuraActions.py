@@ -131,7 +131,7 @@ class CuraActions(QObject):
 
     @pyqtSlot()
     def openBugReportPage(self) -> None:
-        event = CallFunctionEvent(self._openUrl, [QUrl("https://github.com/Ultimaker/Cura/issues/new/choose")], {})
+        event = CallFunctionEvent(self._openUrl, [QUrl("https://github.com/FELIXroboticsBV/FELIX-FILO/issues/new?template=bugreport.yaml")], {})
         cura.CuraApplication.CuraApplication.getInstance().functionEvent(event)
 
     @pyqtSlot()
