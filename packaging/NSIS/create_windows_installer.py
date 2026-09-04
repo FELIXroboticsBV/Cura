@@ -58,18 +58,18 @@ def generate_nsi(source_path: str, dist_path: str, filename: str, version: str):
 
 
     nsis_content = template.render(
-        app_name = f"UltiMaker Cura {version}",
-        main_app = "UltiMaker-Cura.exe",
+        app_name = f"FELIX FILO {version}",
+        main_app = "FELIX-FILO.exe",
         version = version,
         version_major = str(parsed_version.major),
         version_minor = str(parsed_version.minor),
         version_patch = str(parsed_version.patch),
-        company = "UltiMaker",
+        company = "FELIX Robotics",
         year = datetime.now().year,
         cura_license_file = str(source_loc.joinpath("packaging", "cura_license.txt")),
         compression_method = "LZMA",  # ZLIB, BZIP2 or LZMA
         cura_banner_img = str(source_loc.joinpath("packaging", "NSIS", "cura_banner_nsis.bmp")),
-        cura_icon = str(source_loc.joinpath("packaging", "icons", "Cura.ico")),
+        cura_icon = str(source_loc.joinpath("packaging", "icons", "felix-filo-icon.ico")),
         mapped_out_paths = mapped_out_paths,
         rmdir_paths = rmdir_paths,
         destination = filename,
